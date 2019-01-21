@@ -4,6 +4,8 @@
 #include "network.h"
 #include "actuator.h"
 #include "temp.h"
+#include "clock.h"
+#include "logger.h"
 
 #define ethernet_h_
 
@@ -14,9 +16,11 @@
 // (port 80 is default for HTTP):
 
 
+Logger logger;
 Network network;
 Actuator actuator;
 Temperature temperature;
+Clock clock;
 
 void setup() {
   
@@ -29,10 +33,12 @@ void setup() {
   network.init();
   actuator.init();
   temperature.init();
+  clock.init();
 }
 
 void loop() {
   network.run();
   actuator.run();
   temperature.run();
+  clock.run();
 }

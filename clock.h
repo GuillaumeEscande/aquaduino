@@ -1,20 +1,18 @@
 
-#ifndef Reseau_h
-#define Reseau_h
+#ifndef Clock_h
+#define Clock_h
 
 #include "Arduino.h"
 
-class Network{
+class Clock{
   private :
-    byte mac[6];
     
   public :
-    Network();
+    Clock();
     void init();
     void run();
 
-    String toString();
-  
+    String toString(); 
 };
 
 

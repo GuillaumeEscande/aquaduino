@@ -1,10 +1,12 @@
 #include "Arduino.h"
 #include "network.h"
 
+#include <Ethernet.h>
+
+EthernetServer server(80);
 
 
-
-Network::Network():server(80),mac{ 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }{
+Network::Network():mac{ 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }{
   }
 
 
